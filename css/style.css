@@ -1130,4 +1130,170 @@ nav .nav-list > .nav-top:hover::after {
 
 
 /* PRODUK.HTML */
+.item {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.item-text .item-product1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* Container utama produk */
+.container-image {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* default 4 produk per baris */
+    gap: 20px;
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 0 16px; /* kasih ruang kiri kanan */
+}
+
+/* Card Produk */
+.card-image {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card-image:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.card-image .image1 {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Teks dalam card */
+.card-image .title-text1 {
+    font-weight: 700;
+    font-size: 16px;
+    color: #111827;
+    text-align: left;
+}
+
+.card-image .description-text2 {
+    font-size: 14px;
+    color: #6B7280;
+    margin-top: 6px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.card-image .cost-text {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2563eb;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.card-image .add-to-cart-text {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 18px;
+    background-color: #1d4fd9;
+    color: #fff;
+    text-align: center;
+    margin-top: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.card-image .add-to-cart-text:hover {
+    background-color: #1742b5;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* jarak antar tombol */
+}
+
+.pagination button,
+.pagination .page-number {
+    min-width: 36px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: #374151;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.pagination button:hover,
+.pagination .page-number:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.pagination .page-number.active {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination button:disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVE BREAKPOINT */
+/* Tablet: 2 produk per baris */
+@media (max-width: 1024px) {
+    .container-image {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* HP besar: 2 produk per baris */
+@media (max-width: 768px) {
+    .container-image {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* HP kecil: 1 produk per baris */
+@media (max-width: 480px) {
+    .container-image {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image .image1 {
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
